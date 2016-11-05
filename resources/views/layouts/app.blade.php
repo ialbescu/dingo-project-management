@@ -20,6 +20,7 @@
     <script>
         var assetUserImage = "{{ asset('img/user_1.jpg') }}";
     </script>
+    <base src="{{ public_path() }}" />
 </head>
 <body>
     <div class="spinner">

@@ -20,7 +20,7 @@ $(document).ready(function() {
                         var cardId = $(targetCard).data('cardid');
 
                         $.ajax({
-                            url: 'board/changeCardList',
+                            url: '/board/changeCardList',
                             type: 'POST',
                             dataType: 'json',
                             data: {
@@ -239,7 +239,7 @@ $(document).ready(function() {
                 closeOnConfirm: false 
                 }, function(){   
                     $.ajax({
-                        url: 'board/delete-list',
+                        url: '/board/delete-list',
                         type: 'POST',
                         dataType: 'json',
                         data: {
@@ -277,7 +277,7 @@ $(document).ready(function() {
         updateTaskCompleted: function (taskId, isCompleted) {
             var cardId = $(document).find('#card-detail').attr("data-cardid");
             $.ajax({
-                url: 'board/update-task-completed',
+                url: '/board/update-task-completed',
                 type: 'POST',
                 dataType: 'json',
                 data: {
@@ -303,7 +303,7 @@ $(document).ready(function() {
         saveTask: function (taskTitle, cardId) {
             var that = this;
             $.ajax({
-                url: 'board/save-task',
+                url: '/board/save-task',
                 type: 'POST',
                 dataType: 'json',
                 data: {
@@ -360,7 +360,7 @@ $(document).ready(function() {
         postComment: function (comment, cardId) {
             var that = this;
             $.ajax({
-                url: 'board/save-comment',
+                url: '/board/save-comment',
                 type: 'POST',
                 dataType: 'json',
                 data: {
@@ -419,7 +419,7 @@ $(document).ready(function() {
             var cardId = $(document).find('#card-detail').attr("data-cardid");
 
             $.ajax({
-                url: 'board/update-card-data',
+                url: '/board/update-card-data',
                 type: 'POST',
                 dataType: 'json',
                 data: {
@@ -471,7 +471,7 @@ $(document).ready(function() {
                     closeOnConfirm: false 
                 }, function(){   
                     $.ajax({
-                        url: 'board/delete-task',
+                        url: '/board/delete-task',
                         type: 'POST',
                         dataType: 'json',
                         data: {
@@ -515,7 +515,7 @@ $(document).ready(function() {
         putCardDetailInModal: function (cardId) {
             var that = this;
             $.ajax({
-                url: 'board/getCardDetail',
+                url: '/board/getCardDetail',
                 type: 'POST',
                 dataType: 'json',
                 data: {
@@ -739,7 +739,7 @@ $(document).ready(function() {
                 closeOnConfirm: false 
                 }, function(){   
                     $.ajax({
-                        url: 'board/deleteCard',
+                        url: '/board/deleteCard',
                         type: 'POST',
                         dataType: 'json',
                         data: {
@@ -761,7 +761,7 @@ $(document).ready(function() {
         saveCard: function (data, curentBtnClicked) {
             var that = this;
             $.ajax({
-                url: 'board/postCard',
+                url: '/board/postCard',
                 type: 'POST',
                 dataType: 'json',
                 data: data,
@@ -840,7 +840,7 @@ $(document).ready(function() {
         },
         createActivity: function(activity_in_id, changed_in, activity_description) {
             $.ajax({
-                url: 'board/create-user-activity',
+                url: '/board/create-user-activity',
                 type: 'POST',
                 dataType: 'json',
                 data: {
@@ -859,7 +859,7 @@ $(document).ready(function() {
         saveList: function (data, curentBtnClicked) {
             that = this;
             $.ajax({
-                url: 'board/postListName',
+                url: '/board/postListName',
                 type: 'POST',
                 dataType: 'json',
                 data: data,
